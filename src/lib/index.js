@@ -14,3 +14,10 @@ export const Backgrounds = {
 export const Products = {
     bookmarkBackground: "/products/bookmark-lineup.jpg"
 }
+
+export const Titles = {
+    home: 'Home - JCS',
+    products: 'Products - JCS',
+    policy: 'Policies - JCS',
+    help: 'Help - JCS',
+}

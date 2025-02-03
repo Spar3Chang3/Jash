@@ -18,8 +18,8 @@
         position: relative;
         margin: 0;
         min-height: 100vh;
-        min-width: 100vw;
-        max-width: 100vw;
+        min-width: 100dvw;
+        max-width: 100dvw;
 
         background-color: whitesmoke;
     }
@@ -30,8 +30,8 @@
 
     main {
         min-height: 80vh;
-        min-width: 100vw;
-        max-width: 100vw;
+        min-width: 100dvw;
+        max-width: 100dvw;
     }
 
 </style>

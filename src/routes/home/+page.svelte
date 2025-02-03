@@ -1,6 +1,6 @@
 <script lang="js'">
     import { onMount } from 'svelte';
-    import { Backgrounds, Products } from '$lib/index.js';
+    import { Backgrounds, Products, Titles } from '$lib/index.js';
     import Dropdown from "$lib/components/layout/Dropdown.svelte";
 
     const products = [
@@ -14,7 +14,7 @@
     ]
 
     onMount(() => {
-
+        document.title = Titles.home;
     });
 
 </script>
@@ -28,7 +28,7 @@
         min-height: 80vh;
         max-width: 100dvw;
 
-        font-family: var(--font-standard);
+        font-family: var(--font-special);
         font-size: 2rem;
         color: var(--color-primary);
     }
@@ -72,6 +72,7 @@
 
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .products, .about-us {
@@ -113,17 +114,15 @@
         align-items: center;
         text-align: center;
 
-        border: 0.15rem dashed var(--color-secondary);
         border-radius: 8px;
         background-color: var(--color-primary);
 
         color: white;
         font-size: 1.5rem;
-        line-height: 1rem;
     }
 
     .product h4 {
-        margin: 1rem;
+        margin: 0.5rem;
     }
 
     .product-image {
@@ -131,6 +130,7 @@
         width: 15rem;
 
         object-fit: cover;
+        border: 0.15rem dashed var(--color-secondary);
     }
 
     .product-name a {

@@ -1,7 +1,12 @@
 <script lang="js">
+    import { onMount } from 'svelte';
+    import { Titles } from '$lib/index.js';
     import '$lib/common.css';
     import PageBanner from '$lib/components/layout/PageBanner.svelte'
 
+    onMount(() => {
+        document.title = Titles.help;
+    });
 </script>
 <style lang="css">
 

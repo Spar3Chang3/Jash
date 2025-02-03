@@ -36,6 +36,6 @@
 </style>
 <section class="footer">
 	<div class="copyright">
-		<h5>&copy; {year} Josh Studio Creations</h5>
+		<h5>&copy; {year} Josh Creations Studio</h5>
 	</div>
 </section>

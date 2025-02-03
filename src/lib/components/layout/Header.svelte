@@ -26,9 +26,17 @@
 
     .relative-header {
         top: 0;
+        position: relative;
+        display: flex;
+
         height: 10dvh;
-        min-width: 100vw;
-        max-width: 100vw;
+        min-width: 100dvw;
+        max-width: 100dvw;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        background-color: var(--color-banner);
     }
 
     .fixed-header {
@@ -39,9 +47,9 @@
 
         min-height: 25px;
         height: 10dvh;
-        max-height: 10vh;
-        min-width: 100vw;
-        max-width: 100vw;
+        max-height: 10dvh;
+        min-width: 100dvw;
+        max-width: 100dvw;
 
         justify-content: center;
         align-items: center;
@@ -60,6 +68,8 @@
         align-items: center;
 
         margin-left: 2rem;
+        font-size: 1.5rem;
+        color: var(--color-secondary);
     }
 
     .nav-controller {
@@ -123,7 +133,7 @@
 
     .navbar {
         position: fixed;
-        top: 10vh;
+        top: 10dvh;
         display: flex;
         flex-direction: row;
 
@@ -147,19 +157,21 @@
         grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 
         height: 100%;
-        width: 80%;
+        width: 100%;
 
         justify-content: center;
         justify-items: center;
         align-items: center;
 
         list-style: none;
+        padding: 0;
     }
 
     .nav-links li a {
         text-decoration: none;
         color: var(--color-secondary);
         font-size: 1.8rem;
+        text-align: center;
     }
 
     .open {
@@ -167,10 +179,51 @@
         opacity: 1;
     }
 
+    @media only screen and (max-width: 768px) {
+
+        .fixed-header {
+            background-color: transparent;
+            min-height: 10dvh;
+            height: 15dvh;
+            max-height: 15dvh;
+        }
+
+        .relative-header {
+            height: 15dvh;
+        }
+
+        .nav-toggle {
+            margin-right: 1.5rem;
+        }
+
+        .navbar {
+            top: 15dvh;
+            height: fit-content;
+        }
+
+        .nav-links {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(auto-fit, minmax(40px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .heading {
+            visibility: hidden;
+        }
+
+        .mobile-show-heading {
+            visibility: visible;
+        }
+
+        .mobile-show-color {
+            background-color: var(--color-banner);
+        }
+    }
+
 </style>
 <section class="header">
-    <div class="fixed-header">
-        <div class="heading">
+    <div class="fixed-header" class:mobile-show-color={isOpen}>
+        <div class="heading" class:mobile-show-heading={isOpen}>
             JAAAAASH
         </div>
         <div class="nav-controller">
@@ -190,6 +243,8 @@
         </nav>
     </div>
     <div class="relative-header">
-
+        <div class="heading">
+            JAAAAASH Mobile
+        </div>
     </div>
 </section>
