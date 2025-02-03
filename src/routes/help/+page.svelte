@@ -1,16 +1,9 @@
 <script lang="js">
-    import { onMount } from 'svelte';
-    import { Backgrounds } from '$lib/index.js';
-
+    import '$lib/common.css';
+    import PageBanner from '$lib/components/layout/PageBanner.svelte'
 
 </script>
 <style lang="css">
-
-    hr {
-        width: 95%;
-        height: 0.15rem;
-        background-color: var(--color-primary);
-    }
 
     .help {
         position: relative;
@@ -20,50 +13,6 @@
         min-height: 80dvh;
         max-width: 100dvw;
 
-        align-items: center;
-    }
-
-    .page-desc {
-        position: relative;
-        display: flex;
-
-        height: 40vh;
-        width: 100dvw;
-
-        justify-content: center;
-        align-items: center;
-
-        color: whitesmoke;
-        font-family: var(--font-special);
-        font-size: 2.5rem;
-        text-shadow: 2px 2px 4px var(--color-secondary);
-    }
-
-    .desc-background {
-        position: absolute;
-
-        height: 100%;
-        width: 100%;
-    }
-
-    .desc-img {
-
-        height: 100%;
-        width: 100%;
-
-        object-fit: cover;
-
-        object-position: center;
-    }
-
-    .desc-text {
-        position: absolute;
-        display: flex;
-
-        height: 100%;
-        width: 100%;
-
-        justify-content: center;
         align-items: center;
     }
 
@@ -82,16 +31,18 @@
         font-size: 2.5rem;
     }
 
+    .contact h4, .contact p {
+        margin: 0.5rem;
+    }
+
+    .contact h2 {
+        margin: 0.5rem;
+    }
+
 </style>
 <section class="help">
-    <div class="page-desc">
-        <div class="desc-background">
-            <img class="desc-img" src={Backgrounds.wallBackground} alt="Background banner for the text 'Help'"/>
-        </div>
-        <div class="desc-text">
-            <h1>Help</h1>
-        </div>
-    </div>
+
+    <PageBanner heroText="Help" />
 
     <div class="contact">
         <h2>Contact</h2>

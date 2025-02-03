@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "name": "Bookmark",
+      "prompt": "Need a cheap bookmark?",
+      "price": 10,
+      "storeLink": "https://bookmark.org",
+      "imageLink": "/products/bookmark-lineup.jpg"
+    }
+  ]
+}

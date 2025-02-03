@@ -1,5 +1,6 @@
 <script lang="js">
     import { onMount } from 'svelte';
+    import { onNavigate } from '$app/navigation';
     import { SiteLinks } from '$lib/index.js';
 
     let isOpen = $state(false);
@@ -9,6 +10,10 @@
 
         isOpen = !isOpen;
     }
+
+    onNavigate(() => {
+        isOpen = false;
+    });
 
     onMount(() => {
 
@@ -42,6 +47,7 @@
         align-items: center;
         z-index: 10;
         background-color: var(--color-banner);
+        font-family: var(--font-special);
     }
 
     .heading {
@@ -148,13 +154,12 @@
         align-items: center;
 
         list-style: none;
-        font-family: var(--font-standard);
     }
 
     .nav-links li a {
         text-decoration: none;
         color: var(--color-secondary);
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .open {
@@ -179,7 +184,8 @@
             <ul class="nav-links">
                 <li><a href={SiteLinks.home}>Home</a></li>
                 <li><a href={SiteLinks.help}>Help</a></li>
-                <li><a href={SiteLinks.policies}>Policy</a></li>
+                <li><a href={SiteLinks.policy}>Policy</a></li>
+                <li><a href={SiteLinks.products}>Products</a></li>
             </ul>
         </nav>
     </div>

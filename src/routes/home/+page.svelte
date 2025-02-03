@@ -53,6 +53,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
+        filter: blur(4px);
     }
 
     .background-container img {
@@ -60,7 +61,6 @@
         width: 100%;
         object-fit: cover;
         object-position: center;
-        image-rendering: optimizeQuality;
     }
 
     .hero-text {

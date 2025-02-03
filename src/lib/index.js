@@ -1,7 +1,7 @@
 export const SiteLinks = {
     home: '/home',
-    product: '/product',
-    policies: '/policies',
+    products: '/products',
+    policy: '/policy',
     help: '/help',
     update: '/update',
 }
