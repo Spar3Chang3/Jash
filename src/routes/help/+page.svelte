@@ -44,6 +44,13 @@
         margin: 0.5rem;
     }
 
+    @media only screen and (max-width: 768px) {
+
+        .contact {
+            font-size: 1.5rem;
+        }
+    }
+
 </style>
 <section class="help">
 

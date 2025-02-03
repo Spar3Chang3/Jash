@@ -146,6 +146,13 @@
         width: 95%;
 
     }
+
+    @media only screen and (max-width: 768px) {
+        .product-container {
+            justify-content: center;
+            align-items: center;
+        }
+    }
 </style>
 <section class="home">
     <div class="intro-container">
