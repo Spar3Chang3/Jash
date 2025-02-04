@@ -1,7 +1,7 @@
 <script lang="js">
     import { onMount } from 'svelte';
     import { onNavigate } from '$app/navigation';
-    import { SiteLinks } from '$lib/index.js';
+    import { SiteLinks, Icons } from '$lib/index.js';
 
     let isOpen = $state(false);
 
@@ -56,9 +56,12 @@
         z-index: 10;
         background-color: var(--color-banner);
         font-family: var(--font-special);
+
+        transition: color 0.4s ease;
     }
 
     .heading {
+        position: relative;
         display: flex;
 
         height: 100%;
@@ -70,6 +73,19 @@
         margin-left: 2rem;
         font-size: 1.5rem;
         color: var(--color-secondary);
+
+        transition: opacity 0.4s ease;
+    }
+
+    .logo {
+        position: absolute;
+        height: 80%;
+        width: fit-content;
+
+        border-radius: 50%;
+
+        object-fit: contain;
+        object-position: center;
     }
 
     .nav-controller {
@@ -209,10 +225,12 @@
 
         .heading {
             visibility: hidden;
+            opacity: 0;
         }
 
         .mobile-show-heading {
             visibility: visible;
+            opacity: 1;
         }
 
         .mobile-show-color {
@@ -224,7 +242,7 @@
 <section class="header">
     <div class="fixed-header" class:mobile-show-color={isOpen}>
         <div class="heading" class:mobile-show-heading={isOpen}>
-            JAAAAASH
+            <img class="logo" src={Icons.jsc} alt="Josh Studio Creations logo"/>
         </div>
         <div class="nav-controller">
             <button class="nav-toggle showHam" aria-label="Menu Toggle" class:showX={isOpen} onclick={toggleNav}>
@@ -239,6 +257,7 @@
                 <li><a href={SiteLinks.help}>Help</a></li>
                 <li><a href={SiteLinks.policy}>Policy</a></li>
                 <li><a href={SiteLinks.products}>Products</a></li>
+                <li><a href={SiteLinks.updates}>Updates</a></li>
             </ul>
         </nav>
     </div>

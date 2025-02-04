@@ -3,7 +3,7 @@ export const SiteLinks = {
     products: '/products',
     policy: '/policy',
     help: '/help',
-    update: '/update',
+    updates: '/updates',
 }
 
 export const Backgrounds = {
@@ -20,4 +20,17 @@ export const Titles = {
     products: 'Products - JCS',
     policy: 'Policies - JCS',
     help: 'Help - JCS',
+    updates: 'Updates - JCS',
+}
+
+export const Icons = {
+    jsc: '/icons/jsc-logo.png',
+}
+
+export function GetFormattedDate() {
+    const date = new Date();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${month}/${day}/${year}`;
 }

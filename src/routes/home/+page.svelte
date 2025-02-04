@@ -1,7 +1,8 @@
 <script lang="js'">
     import { onMount } from 'svelte';
-    import { Backgrounds, Products, Titles } from '$lib/index.js';
+    import { Backgrounds, Products, Titles, GetFormattedDate } from '$lib/index.js';
     import Dropdown from "$lib/components/layout/Dropdown.svelte";
+    import '$lib/common.css';
 
     const products = [
         {
@@ -19,6 +20,12 @@
 
 </script>
 <style lang="css">
+
+    h2 {
+        margin: 1rem;
+        font-size: 2.5rem;
+    }
+
     .home {
         position: relative;
         display: flex;
@@ -29,7 +36,6 @@
         max-width: 100dvw;
 
         font-family: var(--font-special);
-        font-size: 2rem;
         color: var(--color-primary);
     }
 
@@ -75,7 +81,7 @@
         text-align: center;
     }
 
-    .products, .about-us {
+    .products, .updates, .about-us {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -85,12 +91,6 @@
 
         justify-content: center;
         align-items: center;
-    }
-
-    hr {
-        width: 95%;
-        height: 0.15rem;
-        background-color: var(--color-primary);
     }
 
     .product-container {
@@ -137,7 +137,7 @@
         color: var(--color-secondary);
     }
 
-    .about-us-questions {
+    .about-us-questions, .current-updates {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -161,6 +161,14 @@
         </div>
         <div class="hero-text">
             <h1>Josh's Creations Studio</h1>
+        </div>
+    </div>
+
+    <div class="updates">
+        <h2>Updates</h2>
+        <hr/>
+        <div class="current-updates">
+            <Dropdown timestamp={GetFormattedDate()} summary="I LOVE YOU" fullText="See above"/>
         </div>
     </div>
 

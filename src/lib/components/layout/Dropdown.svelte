@@ -1,6 +1,6 @@
 <script>
 
-    let { summary = "Default summary text", fullText = "Default full text" } = $props();
+    let { summary = "Default summary text", fullText = "Default full text", timestamp = '' } = $props();
 
     let isOpen = $state(false);
 
@@ -17,7 +17,7 @@
         transition: all 0.3s ease;
 
         color: var(--color-secondary);
-        font-family: var(--font-standard);
+        font-family: var(--font-special);
     }
 
     button {
@@ -42,8 +42,8 @@
     .content {
         padding: 0 1rem 0;
         color: var(--color-secondary);
+        transition: all 0.5s ease;
         overflow: hidden;
-        transition: height, max-height 0.3s ease;
     }
 
     .no-content {
@@ -58,7 +58,7 @@
     .arrow {
         width: 24px;
         height: 24px;
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
         flex-shrink: 0;
         fill: var(--color-secondary);
     }
@@ -74,7 +74,7 @@
 
 <div class="dropdown {isOpen ? 'open' : ''}">
     <button onclick={toggle} aria-expanded={isOpen}>
-        <span>{summary}</span>
+        <span style="font-size: 1.25rem;"><b style="filter: hue-rotate(25deg)">{timestamp}</b> {summary}</span>
         <svg class="arrow" viewBox="0 0 24 24" width="24" height="24">
             <path d="M7 10l5 5 5-5z" />
         </svg>

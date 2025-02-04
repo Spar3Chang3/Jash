@@ -7,5 +7,12 @@
       "storeLink": "https://bookmark.org",
       "imageLink": "/products/bookmark-lineup.jpg"
     }
+  ],
+  "updates": [
+    {
+      "title": "Filament out",
+      "description": "Our filament is out. TF else do you want me to say",
+      "timestamp": "MM/DD/YYYY"
+    }
   ]
 }

@@ -32,8 +32,8 @@
         justify-content: center;
         align-items: center;
 
-        font-family: var(--font-standard);
-        font-size: 2.5rem;
+        font-family: var(--font-special);
+        font-size: 1.5rem;
     }
 
     .contact h4, .contact p {
@@ -41,13 +41,15 @@
     }
 
     .contact h2 {
-        margin: 0.5rem;
+        margin: 1rem;
+        font-size: 2.5rem;
     }
 
     @media only screen and (max-width: 768px) {
 
         .contact {
-            font-size: 1.5rem;
+            font-size: 1rem;
+            text-align: center;
         }
     }
 
